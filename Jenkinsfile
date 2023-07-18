@@ -27,7 +27,7 @@ pipeline{
             stage('docker build')
               {
                   steps{  
-                  scripts{
+                  script{
                       sh'sudo docker build -t docker_image:1'
                       
                       }   
