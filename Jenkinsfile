@@ -24,5 +24,14 @@ pipeline{
                    sh'sudo docker --version'
                   }
                }
+            stage('docker build')
+              {
+                  steps{  
+                  scripts{
+                      sh'sudo docker build -t docker_image:1'
+                      
+                      }   
+                     }
+               }
         }
     }
