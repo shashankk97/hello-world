@@ -1,7 +1,4 @@
-# Pull base image 
-From tomcat:8-jre8
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
-
+FROM ubuntu
+LABEL maintainer=shashank
+COPY  /var/lib/jenkins/.m2/repository/works/buddy/samples/works-with-heroku/1.0/*.war  ./opt
+CMD ["./*.war"]
